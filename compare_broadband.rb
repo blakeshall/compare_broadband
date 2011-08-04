@@ -3,6 +3,6 @@ require 'sinatra'
 require 'broadband_map'
 
 get '/' do
-  :index
+  erb :index
 end
 
