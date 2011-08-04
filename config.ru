@@ -1,2 +1,2 @@
-require './compare_broadband'
+require 'compare_broadband'
 run Sinatra::Application
