@@ -3,6 +3,9 @@ body{
   width: 75%;
   size: 1em;
 }
+#content{
+  text-align: center;
+}
 h1{
   text-align: center;
 }
