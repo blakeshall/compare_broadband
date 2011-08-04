@@ -5,4 +5,9 @@ body{
 h1{
   text-align: center;
 }
-
+#first{
+  float: left;
+}
+#second{
+  float: right;
+}
