@@ -1,9 +1,24 @@
 body{
   margin: 0 auto;
-  width: 50%;
+  width: 75%;
+  size: 1em;
 }
 h1{
   text-align: center;
+}
+h2{
+  font-size: 2em;
+}
+h3{
+  font-size: 1.75em;
+}
+h4{
+  font-size: 1.50em;
+
+}
+h5{
+  font-size: 1.25em;
+
 }
 #first{
   float: left;
@@ -11,3 +26,7 @@ h1{
 #second{
   float: right;
 }
+span{
+  font-weight: bold;
+}
+

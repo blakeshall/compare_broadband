@@ -1,25 +1,49 @@
 <html>
   <head>
-    <title>Compare <%= @first %> and <%= @second %></title>
+    <title>Compare <%= @first.upcase %> and <%= @second.upcase %></title>
     <link rel="stylesheet" type="text/css" href="app.css" />
   </head>
 
   <body>
-    <h2>Results for <%= @first %> and <%= @second %></h2>
+    <h2>Results for <%= @first.upcase %> and <%= @second.upcase %></h2>
     <div id="first">
-    <h3><%= @first %></h3>
-    <% @wireline1.results.wireline_services.each do |x| %>
-      <p><%= x.provider_name %></p>
-      <p>Max Advertised Speed: <%= x.technologies[0].maximum_advertised_download_speed %>Mbs</p>
-    <% end %>
-  </div>
-  <div id = "second">
-    <h3><%= @second %></h3>
-     <% @wireline2.results.wireline_services.each do |x| %>
-       <p><%= x.provider_name %></p>
-       <p>Max Advertised Speed: <%= x.technologies[0].maximum_advertised_download_speed %>Mbs</p>
-     <% end %>
-   </div>
+      <h3><%= @first.upcase %></h3>
+      <div class="wireline">
+        <h4>Wireline Providers</h4>
+        <% @wireline1.results.wireline_services.each do |x| %>
+          <h5><%= x.provider_name %></h5>
+          <p>Max Advertised Download Speed: <span><%= x.technologies[0].maximum_advertised_download_speed %></span>Mbs</p>
+          <p>Max Advertised Upload Speed: <span><%= x.technologies[0].maximum_advertised_upload_speed %></span>Mbs</p>
+        <% end %>
+      </div>
+      <div class="wireless">
+         <h4>Wireless Providers</h4>
+          <% @wireless1.results.wireless_services.each do |x| %>
+          <h5><%= x.provider_name %></h5>
+          <p>Max Advertised Download Speed: <span><%= x.technologies[0].maximum_advertised_download_speed %></span>Mbs</p>
+          <p>Max Advertised Upload Speed: <span><%= x.technologies[0].maximum_advertised_upload_speed %></span>Mbs</p>
+        <% end %>
+      </div>
+    </div>
+    <div id = "second">
+      <h3><%= @second.upcase %></h3>
+      <div class="wireline">
+        <h4>Wireline Providers</h4>
+       <% @wireline2.results.wireline_services.each do |x| %>
+         <h5><%= x.provider_name %></h5>
+         <p>Max Advertised Speed: <span><%= x.technologies[0].maximum_advertised_download_speed %></span>Mbs</p>
+         <p>Max Advertised Upload Speed: <span><%= x.technologies[0].maximum_advertised_upload_speed %></span>Mbs</p>
+       <% end %>
+     </div>
+     <div class="wireless">
+        <h4>Wireless Providers</h4>
+        <% @wireless2.results.wireless_services.each do |x| %>
+          <h5><%= x.provider_name %></h5>
+          <p>Max Advertised Download Speed: <span><%= x.technologies[0].maximum_advertised_download_speed %></span>Mbs</p>
+          <p>Max Advertised Upload Speed: <span><%= x.technologies[0].maximum_advertised_upload_speed %></span>Mbs</p>
+        <% end %>
+      </div>
+     </div>
   </body>
 </html>
 
