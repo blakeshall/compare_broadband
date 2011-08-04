@@ -1,11 +1,21 @@
 <html>
   <head>
     <title>Compare <%= @first %> and <%= @second %></title>
+    <link rel="stylesheet" type="text/css" href="app.css" />
   </head>
 
   <body>
     <h2>Results for <%= @first %> and <%= @second %></h2>
-
+    <h3><%= @first %></h3>
+    <% @wireline1.results.wireline_services.each do |x| %>
+      <p><%= x.provider_name %></p>
+      <p>Max Advertised Speed: <%= x.technologies[0].maximum_advertised_download_speed %>Mbs</p>
+    <% end %>
+    <h3><%= @second %></h3>
+     <% @wireline2.results.wireline_services.each do |x| %>
+       <p><%= x.provider_name %></p>
+       <p>Max Advertised Speed: <%= x.technologies[0].maximum_advertised_download_speed %>Mbs</p>
+    <% end %>
   </body>
 </html>
 
