@@ -9,6 +9,9 @@ get '/' do
 end
 
 get '/compare' do
+  if params['first'].nil? || params['second'].nil? || params['first'] == '' || params['second'] == ''
+    redirect to ('/')
+  end
   @first = params['first']
   @second = params['second']
   @location1 = Geocoder.search(@first)[0].data['geometry']['location']
