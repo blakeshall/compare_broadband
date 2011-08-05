@@ -1,13 +1,15 @@
 <html>
   <head>
     <title>Compare <%= @first.upcase %> and <%= @second.upcase %></title>
-    <link rel="stylesheet" type="text/css" href="app.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
   <body>
+    <div class="content">
     <h2>Results for <%= @first.upcase %> and <%= @second.upcase %></h2>
-    <div id="first">
-      <h3><%= @first.upcase %></h3>
+    <div id="results">
+    <div id="left">
+      <h3><%= @first.capitalize %></h3>
       <div class="wireline">
         <h4>Wireline Providers</h4>
         <% @wireline1.results.wireline_services.each do |x| %>
@@ -25,8 +27,8 @@
         <% end %>
       </div>
     </div>
-    <div id = "second">
-      <h3><%= @second.upcase %></h3>
+    <div id = "right">
+      <h3><%= @second.capitalize %></h3>
       <div class="wireline">
         <h4>Wireline Providers</h4>
        <% @wireline2.results.wireline_services.each do |x| %>
@@ -44,6 +46,8 @@
         <% end %>
       </div>
      </div>
+   </div>
+ </div>
   </body>
 </html>
 
