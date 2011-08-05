@@ -171,6 +171,7 @@ body{
   width: 75%;
   margin: 0 auto;
   text-align: center;
+  background-image: URL("white_texture.png");
 }
 .content h1{
   font-size: 2em;
@@ -184,6 +185,7 @@ body{
 }
 .content h4{
   font-size: 1.25em;
+  padding: 1em 0;
 }
 #results{
   width: 60%
