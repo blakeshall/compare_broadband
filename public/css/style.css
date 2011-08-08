@@ -186,15 +186,17 @@ header{
 .svg{
   padding: 10px;
 }
-#left{
-  float: left;
+table{
+  border: 1px solid;
+  margin: 0 auto;
 }
-
-#right{
-  float: right;
+td{
+  border: 1px solid;
+  padding: 1px 5px;
 }
-
-
+th{
+  padding: 1px 5px;
+}
 
 
 
