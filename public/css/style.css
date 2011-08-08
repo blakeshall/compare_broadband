@@ -153,7 +153,7 @@ body, select, input, textarea {
   color: #444;
   /* Set your base font here, to apply evenly */
   font-family: Georgia, serif;
-  background-image: URL("white_texture.png");
+  background-image: URL("/img/white_texture.png");
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
@@ -175,7 +175,13 @@ a:hover { color: #036; }
   text-align: center;
 }
 #container h1{
-  font-size: 2em;
+  font-size: 20pt;
+}
+#container h3{
+  font-size: 18pt;
+}
+.svg{
+  padding: 10px;
 }
 #left{
   float: left;
