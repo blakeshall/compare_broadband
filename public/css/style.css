@@ -153,7 +153,6 @@ body, select, input, textarea {
   color: #444;
   /* Set your base font here, to apply evenly */
   font-family: Georgia, serif;
-  background-image: URL("/img/white_texture.png");
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
@@ -166,7 +165,7 @@ a:hover { color: #036; }
 /**
  * Primary styles
  *
- * Author:
+ * Author: Blake Hall
  */
 
 #container{
@@ -196,8 +195,8 @@ td{
 }
 th{
   padding: 1px 5px;
+  background-color: #FF841E;
 }
-
 
 
 
