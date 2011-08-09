@@ -190,8 +190,14 @@ header{
   width: 100px;
   margin: 5px auto;
 }
-#main form{
-  padding: 5px;
+#main form, p{
+  padding: 20px;
+}
+#main{
+  font-size: 12pt;
+}
+input{
+  margin: 10px;
 }
 
 
