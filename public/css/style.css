@@ -185,7 +185,14 @@ header{
 .svg{
   padding: 10px;
 }
-
+#submit{
+  display: block;
+  width: 100px;
+  margin: 5px auto;
+}
+#main form{
+  padding: 5px;
+}
 
 
 

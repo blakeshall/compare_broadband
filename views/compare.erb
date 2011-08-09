@@ -4,10 +4,13 @@
 <div id="main" role="main">
 
   <div id="results">
+    <p>Here is what <a href="http://www.broadbandmap.gov">broadbandmap.gov</a> has on the two locations you gave.
+    Wireline providers are hardline connections like cable or DSL. Wireless
+    providers are typically cell providers. All units are in Mb/s (Megabits per second)</p>
 	      <div class="wireline">
           <iframe src="img/network.svg" width="100" height="100" class="svg"></iframe>
           <h3>Wireline Providers</h3>
-          <h3><%= @first.capitalize %></h3>
+          <h3><%= @first.split(' ').map {|w| w.capitalize }.join(' ') %></h3>
           <table id="wireline_table1" class="tablesorter">
             <thead>
             <tr>
@@ -19,14 +22,14 @@
           <tbody>
 	        <% @wireline1.results.wireline_services.each do |x| %>
             <tr>
-              <td><%= x.provider_name %></td>
+              <td class="provider"><%= x.provider_name %></td>
               <td><%= x.technologies[0].maximum_advertised_download_speed %></td>
               <td><%= x.technologies[0].maximum_advertised_upload_speed %></td>
             </tr>
 	        <% end %>
         </tbody>
         </table>
-          <h3><%= @second.capitalize %></h3>
+        <h3><%= @second.split(' ').map {|w| w.capitalize }.join(' ') %></h3>
           <table id="wireline_table2" class="tablesorter">
             <thead>
             <tr>
@@ -38,7 +41,7 @@
           <tbody>
             <% @wireline2.results.wireline_services.each do |x| %>
               <tr>
-                <td><%= x.provider_name %></td>
+                <td class="provider"><%= x.provider_name %></td>
                 <td><%= x.technologies[0].maximum_advertised_download_speed %></td>
                 <td><%= x.technologies[0].maximum_advertised_upload_speed %></td>
               </tr>
@@ -49,7 +52,7 @@
 	      <div class="wireless">
           <iframe src="img/wireless.svg" width="100" height="100" class="svg"></iframe>
 	         <h3>Wireless Providers</h3>
-           <h3><%= @first.capitalize %></h3>
+           <h3><%= @first.split(' ').map {|w| w.capitalize }.join(' ') %></h3>
            <table id="wireless_table1" class="tablesorter">
              <thead>
              <tr>
@@ -61,14 +64,14 @@
            <tbody>
              <% @wireless1.results.wireless_services.each do |x| %>
                <tr>
-                 <td><%= x.provider_name %></td>
+                 <td class="provider"><%= x.provider_name %></td>
                  <td><%= x.technologies[0].maximum_advertised_download_speed %></td>
                  <td><%= x.technologies[0].maximum_advertised_upload_speed %></td>
                </tr>
              <% end %>
            </tbody>
            </table>
-          <h3><%= @second.capitalize %></h3>
+           <h3><%= @second.split(' ').map {|w| w.capitalize }.join(' ') %></h3>
           <table id="wireless_table2" class="tablesorter">
             <thead>
             <tr>
@@ -80,7 +83,7 @@
           <tbody>
             <% @wireless2.results.wireless_services.each do |x| %>
               <tr>
-                <td><%= x.provider_name %></td>
+                <td class="provider"><%= x.provider_name %></td>
                 <td><%= x.technologies[0].maximum_advertised_download_speed %></td>
                 <td><%= x.technologies[0].maximum_advertised_upload_speed %></td>
               </tr>
